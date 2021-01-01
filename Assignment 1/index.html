@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="LunchCheck">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lunch Checker</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+
+<body >
+    <div class="container" ng-controller="LunchCheckController">
+        <h1>Order Lunch</h1>
+        <div class="form-group">
+            <input id="lunch-menu" type="text" placeholder="Enter dishes want for lunch......" class="form-control" ng-model="dishes">
+        </div>
+        <div class="form-group">
+            <button class="btn btn-default" ng-click="checkLunch()">Place Order</button>
+        </div>
+        <div ng-show="!empty && checked" class="alert alert-success">{{message}}</div>
+        <div ng-show="empty" class="alert alert-danger">Please enter data first</div>
+    </div>
+
+</body>
+
+</html>
