@@ -64,6 +64,6 @@
             toBuyItems.splice(itemIndex, 1);
         };
     }
-})();
+})()
 
 
